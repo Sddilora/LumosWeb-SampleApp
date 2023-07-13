@@ -17,7 +17,7 @@ db.create(Book)
 @app.route("/", allowed_methods=["get"])
 def index(req, resp):
     books = db.all(Book)
-    resp.html = app.template("index.html", context={"books": books})
+    resp.html = app.template("index.md", context={"books": books})
 
 @app.route("/login", allowed_methods=["post"])
 def login(req, resp):
